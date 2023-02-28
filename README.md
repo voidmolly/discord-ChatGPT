@@ -26,5 +26,6 @@ I use [```openai``` API](https://platform.openai.com/docs/) to interact with Cha
 In bot you can change the engine of openai Completion:  
 	```max_tokens``` is actually max number of symbols in ChatGPT's answer  
 	```temperature``` is something that you may change, but you shold read [documentation](https://platform.openai.com/docs/) before  
-You may change theese values in ```config.json```
-	
+You may change theese values in ```config.json```  
+
+Also if you run bot in Russia, you should use server located in another country or use proxy, otherwise ChatGPT won't work.
