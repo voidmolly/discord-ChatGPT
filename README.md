@@ -46,7 +46,7 @@ Commands ```game```, ```stream``` are made at the request of the customer. They 
 ```Read Messages/View Channels``` and ```Send Messages```
 
 ### ChatGPT
-I use [```openai``` API](https://platform.openai.com/docs/) to interact with ChatGPT. Actually, I have some problems with it, because sometimes ChatGPT sends a bit unexpected resaults when you use API.  
+I use [```openai``` API](https://platform.openai.com/docs/) to interact with ChatGPT. Actually, I have some problems with it, because sometimes ChatGPT sends a bit unexpected results when you use API.  
 
 In bot you can change the engine of openai Completion:  
 	```max_tokens``` is actually max number of symbols in ChatGPT's answer  
