@@ -19,22 +19,26 @@ bot = commands.Bot(command_prefix=PREFIX, intents=intents)    # Create an instan
 
 openai.api_key = OPENAI_TOKEN   # set OpenAI API key
 
+
 # Power On
 @bot.event
 async def on_ready():
     print(f'{bot.user} connected to Discord!')
     await bot.change_presence(status=discord.Status.online, activity=discord.Game("людские жизни"))
 
+
 # Change status
 @bot.command()
 async def hello(ctx):
     await ctx.reply("Hi")
+
 
 @bot.command()
 @has_permissions(administrator=True)
 async def game(ctx, name):
     await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=name))
     await ctx.reply(f"Изменил активность на {name}")
+
 
 @bot.command()
 @has_permissions(administrator=True)
@@ -43,7 +47,8 @@ async def stream(ctx, name, url):
     await bot.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name, url=url))
     await ctx.reply(f"Изменил активность на {name}")
 
-# Idk how to make help
+
+# IDK how to make help
 @bot.command()
 async def hint(ctx):
     await ctx.reply(
@@ -53,6 +58,8 @@ async def hint(ctx):
         '!stream <name> <url>\n'
     )
 
+
+# Read new messages
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -60,6 +67,7 @@ async def on_message(message):
 
     await bot.process_commands(message)    # let commands work
 
+    # Get up if sbd mentioned bot
     if bot.user in message.mentions:
         prompt = message.content.replace(f'{bot.user.mention} ', '')
         response = openai.Completion.create(
@@ -69,7 +77,8 @@ async def on_message(message):
             n=1,
             stop=None,
             temperature=0.5
-        )
+        )   # Making a response to ChatGPT
         await message.reply(response.choices[0].text)
+
 
 bot.run(DISCORD_TOKEN)
