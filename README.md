@@ -8,7 +8,7 @@ But if you use *Windows*, you can just run ```setup.bat``` to install libraries,
 Open ```config.json``` with any text editor  
 Then insert you openai and discord tokens in fields with such names  
 
-_Optional:_ 
+_Optional:_  
 	1. You may change prefix in field named ```"prefix"```  
 	2. You may change ```max_tokens``` and ```temperature``` - ChatGPT's configs, but only if you know what you are doing
 
