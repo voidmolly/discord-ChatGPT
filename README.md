@@ -12,11 +12,12 @@ _Optional:_ you may change prefix in field named ```"prefix"```
 
 ## About the bot
 ### Commands
-I use command ```hint``` to send info about commands in chat, because IDK how to make ```help``` command :)
+I use command ```hint``` to send info about commands in chat, because IDK how to make ```help``` command :)  
 Commands ```game```, ```stream``` are made at the request of the customer. They are used for changing bot's status.
 
 ### ChatGPT
 I use [```openai``` API](https://platform.openai.com/docs/) to interact with ChatGPT. Actually, I have some problems with it, because sometimes ChatGPT sends a bit unexpected resaults when you use API.  
+
 In bot you can change the engine of openai Completion:  
 	```max_tokens``` is actually max number of symbols in ChatGPT's answer  
 	```temperature``` is something that you may change, but you shold read [documentation](https://platform.openai.com/docs/) before
