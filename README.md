@@ -1,7 +1,7 @@
 # Discord Bot with ChatGPT
 ## Installation
 ### Python
-Before installing, make sure ```Python 3.6``` is installed  
+Before installing, make sure ```Python 3.11``` is installed  
 ### Libraries
 To install requirements use ```$ pip install -r requirements.txt``` in project's directory  
 
