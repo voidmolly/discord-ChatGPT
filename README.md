@@ -1,9 +1,36 @@
 # Discord Bot with ChatGPT
 ## Installation
+### Python
 Before installing, make sure ```Python 3.6``` is installed  
+### Libraries
 To install requirements use ```$ pip install -r requirements.txt``` in project's directory  
 
-But if you use *Windows*, you can just run ```setup.bat``` to install libraries, then ```Start.bat``` to run the bot  
+## Launch
+### Windows
+But if you use *Windows*, you can just run ```setup.bat``` to install libraries, then ```Start.bat``` to run the bot
+### Linux
+Set up daemon:   
+```sudo nano /etc/systemd/system/dchatgpt.service```   
+```
+[Unit]
+Description=Discord ChatGPT
+After=syslog.target
+
+[Service]
+Type=simple
+User=ИМЯ ПОЛЬЗОВАТЕЛЯ
+Group=sudo
+WorkingDirectory=/home/ИМЯ ПОЛЬЗОВАТЕЛЯ/FunPay-Earnings/
+ExecStart=/usr/bin/python3.11 main.py
+
+[Install]
+WantedBy=multi-user.target
+```   
+
+Run: ```sudo systemctl start dchatgpt```  
+Stop: ```sudo systemctl stop dchatgpt```  
+Restart: ```sudo systemctl restart dchatgpt```  
+Check logs: ```sudo systemctl status dchatgpt```  
 ## Configuring
 Open ```config.json``` with any text editor  
 Then insert you openai and discord tokens in fields with such names  
