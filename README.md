@@ -18,9 +18,9 @@ After=syslog.target
 
 [Service]
 Type=simple
-User=ИМЯ ПОЛЬЗОВАТЕЛЯ
+User=root
 Group=sudo
-WorkingDirectory=/home/ИМЯ ПОЛЬЗОВАТЕЛЯ/FunPay-Earnings/
+WorkingDirectory=/root/discord-ChatGPT/
 ExecStart=/usr/bin/python3.11 main.py
 
 [Install]
