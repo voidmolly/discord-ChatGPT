@@ -1,14 +1,12 @@
 # Discord Bot with ChatGPT
 ## Installation
-### Python
 Before installing, make sure ```Python 3.11``` is installed  
-### Libraries
+
+### Windows
+Just run ```setup.bat``` to install libraries, then ```Start.bat``` to run the bot
+### Linux
 To install requirements use ```$ pip install -r requirements.txt``` in project's directory  
 
-## Launch
-### Windows
-But if you use *Windows*, you can just run ```setup.bat``` to install libraries, then ```Start.bat``` to run the bot
-### Linux
 Set up daemon:   
 ```sudo nano /etc/systemd/system/dchatgpt.service```   
 ```
