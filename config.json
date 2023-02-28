@@ -1,6 +1,8 @@
 {
   "discord_token": "token",
   "openai_token": "token",
-  "prefix": "!"
+  "prefix": "!",
+  "max_tokens" : 3500,
+  "temperature" : 0.5
 }
 

@@ -5,12 +5,14 @@ import openai
 import json
 
 
-# Tokens
+# Config
 with open("config.json", "r", encoding="utf-8") as file:
     config = json.loads(file.read())
     DISCORD_TOKEN = config['discord_token']
     OPENAI_TOKEN = config['openai_token']
     PREFIX = config['prefix']
+    max_tokens = config['max_tokens']
+    temperature = config['temperature']
 
 intents = discord.Intents.all()
 # intents.members = True
@@ -73,10 +75,10 @@ async def on_message(message):
         response = openai.Completion.create(
             engine="text-davinci-003",
             prompt=prompt,
-            max_tokens=2000,
+            max_tokens=max_tokens,
             n=1,
             stop=None,
-            temperature=0.5
+            temperature=temperature
         )   # Making a response to ChatGPT
         await message.reply(response.choices[0].text)
 

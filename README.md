@@ -8,7 +8,9 @@ But if you use *Windows*, you can just run ```setup.bat``` to install libraries,
 Open ```config.json``` with any text editor  
 Then insert you openai and discord tokens in fields with such names  
 
-_Optional:_ you may change prefix in field named ```"prefix"```
+_Optional:_ 
+	1. You may change prefix in field named ```"prefix"```  
+	2. You may change ```max_tokens``` and ```temperature``` - ChatGPT's configs, but only if you know what you are doing
 
 ## About the bot
 ### Commands
@@ -20,5 +22,6 @@ I use [```openai``` API](https://platform.openai.com/docs/) to interact with Cha
 
 In bot you can change the engine of openai Completion:  
 	```max_tokens``` is actually max number of symbols in ChatGPT's answer  
-	```temperature``` is something that you may change, but you shold read [documentation](https://platform.openai.com/docs/) before
+	```temperature``` is something that you may change, but you shold read [documentation](https://platform.openai.com/docs/) before  
+You may change theese values in ```config.json```
 	
