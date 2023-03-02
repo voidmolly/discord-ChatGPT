@@ -42,8 +42,9 @@ _Optional:_
 I use command ```hint``` to send info about commands in chat, because IDK how to make ```help``` command :)  
 Commands ```game```, ```stream``` are made at the request of the customer. They are used for changing bot's status.
 
-### Permissions required
-```Read Messages/View Channels``` and ```Send Messages```
+### Settings
+Permissions: ```Read Messages/View Channels``` and ```Send Messages```
+Intents: all
 
 ### ChatGPT
 I use [```openai``` API](https://platform.openai.com/docs/) to interact with ChatGPT. Actually, I have some problems with it, because sometimes ChatGPT sends a bit unexpected results when you use API.  
