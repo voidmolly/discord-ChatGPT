@@ -43,7 +43,7 @@ I use command ```hint``` to send info about commands in chat, because IDK how to
 Commands ```game```, ```stream``` are made at the request of the customer. They are used for changing bot's status.
 
 ### Settings
-Permissions: ```Read Messages/View Channels``` and ```Send Messages```
+Permissions: ```Read Messages/View Channels``` and ```Send Messages```  
 Intents: all
 
 ### ChatGPT
