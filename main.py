@@ -37,15 +37,15 @@ async def hello(ctx):
 
 @bot.command()
 @has_permissions(administrator=True)
-async def game(ctx, name):
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=name.replace("_", " ")))
-    await ctx.reply(f"Изменил активность на {name.replace("_", " ")}")
+async def game(ctx, *, name):
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game(name=name))
+    await ctx.reply(f"Изменил активность на {name.replace('_', ' ')}")
 
 
 @bot.command()
 @has_permissions(administrator=True)
-async def stream(ctx, name, url):
-    await bot.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name.replace("_", " "), url=url))
+async def stream(ctx, url, *, name):
+    await bot.change_presence(status=discord.Status.online, activity=discord.Streaming(name=name, url=url))
     await ctx.reply(f"Изменил активность на {name}")
 
 
@@ -56,7 +56,7 @@ async def hint(ctx):
         'Чтобы поговорить с ChatGPT, отправьте сообщение с запросом и упомянанием бота\n\n' +
         'Администратор может изменять статус бота, используя команды:\n' +
         '!game <name>\n' +
-        '!stream <name_name> <url>\n'
+        '!stream <url> <name>\n'
     )
 
 
