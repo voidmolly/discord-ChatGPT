@@ -3,7 +3,9 @@
 Before installing, make sure ```Python 3.11``` and ```git``` are installed  
 
 ### Windows
-Just run ```setup.bat``` to install libraries, then ```Start.bat``` to run the bot
+Download ```windows.zip``` from last release  
+Drop ```setup.bat``` in folder - script will make a folder with project inside the choosen folder  
+Drop ```Start.bat``` in project's folder and run it
 ### Linux
 ```git clone https://github.com/voidmolly/discord-ChatGPT.git```  
 To install requirements use ```$ pip install -r requirements.txt``` in project's directory  
